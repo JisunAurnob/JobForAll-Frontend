@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Posts = () => {
 
     useEffect(() => {
-        document.title = "All Posts"
+        document.title = "All Jobs"
       }, [])
     const[posts, setMessages] = useState([]);
 
