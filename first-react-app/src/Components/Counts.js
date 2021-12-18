@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { Component, useEffect, useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 
 const Counts = () => {
+      const[countData, setMessages] = useState([]);
+      useEffect(()=>{
+        axios.get("home/counts")
+        .then(resp=>{
+        console.log(resp.data);
+        setMessages(resp.data);
+         }).catch(err=>{
+        console.log(err);
+    });
+    },[]);
     return (
         <div>
             <section id="counts" class="counts section-bg">
@@ -9,21 +20,21 @@ const Counts = () => {
 
                     <div class="row counters">
                         <div class="col-lg-3 col-6 text-center">
-                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter">13</span>
-                            <p>Users</p>
+                            <span data-purecounter-start="0" data-purecounter-end={countData.userCount} data-purecounter-duration="1" class="purecounter">{countData.userCount}</span>
+                            <p>Total Users</p>
                         </div>
                         <div class="col-lg-3 col-6 text-center">
-                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter">22</span>
+                            <span data-purecounter-start="0" data-purecounter-end={countData.posts} data-purecounter-duration="1" class="purecounter">{countData.posts}</span>
                             <p>Jobs</p>
                         </div>
                         <div class="col-lg-3 col-6 text-center">
-                            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter">4</span>
-                            <p>Admins</p>
+                            <span data-purecounter-start="0" data-purecounter-end={countData.cemps} data-purecounter-duration="1" class="purecounter">{countData.cemps}</span>
+                            <p>Corporates</p>
                         </div>
 
                         <div class="col-lg-3 col-6 text-center">
-                            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter">50</span>
-                            <p>Hard Workers</p>
+                            <span data-purecounter-start="0" data-purecounter-end={countData.femps} data-purecounter-duration="1" class="purecounter">{countData.femps}</span>
+                            <p>Freelance Employers</p>
                         </div>
                     </div>
 

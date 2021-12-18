@@ -56,9 +56,9 @@ const Head = () => {
               {!isLoggedOut && (<li class="dropdown"><a href="#"><span>Manage</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
                   <li><a href="/post/list">Posts</a></li>
-                  <li><a href="#">Freelance Employer</a></li>
-                  <li><a href="#">Corporate Employer</a></li>
-                  <li><a href="#">Job Seeker</a></li>
+                  <li><a href="/femp/list">Freelance Employer</a></li>
+                  <li><a href="/cemp/list">Corporate Employer</a></li>
+                  <li><a href="/seeker/list">Job Seeker</a></li>
                   <li><a href="#">Queries</a></li>
                 </ul>
               </li>)}

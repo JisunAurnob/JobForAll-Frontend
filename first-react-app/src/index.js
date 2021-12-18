@@ -37,6 +37,9 @@ import UpdatePost from './Components/UpdatePost.js';
 import AdminProfile from './Components/AdminProfile.js';
 import AdminProfileUpdate from './Components/AdminProfileUpdate.js';
 import PostDelete from './Components/PostDelete.js';
+import Seekers from './Components/Seekers.js';
+import Femps from './Components/Femps.js';
+import Cemps from './Components/Cemps.js';
 
 var token = null;
 if(localStorage.getItem('user')){
@@ -89,6 +92,18 @@ ReactDOM.render(
 
         <Route exact path="/post/delete/:id">
           <PostDelete />
+        </Route>
+
+        <Route exact path="/seeker/list">
+          <Seekers />
+        </Route>
+
+        <Route exact path="/femp/list">
+          <Femps />
+        </Route>
+
+        <Route exact path="/cemp/list">
+          <Cemps />
         </Route>
         
         <Route exact path="/students">

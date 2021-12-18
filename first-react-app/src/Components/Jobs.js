@@ -13,12 +13,12 @@ const Jobs = () => {
                         <div class="col-lg-3 col-md-6">
                             <div class="box">
                                 <span class="freelance"> Freelance</span>
-                                <h3>Home Servant Needed</h3>
-                                <h4><sup>৳</sup>3,000<span> / month</span></h4>
+                                <h3>Assistant Network Engineer</h3>
+                                <h4><sup>৳</sup>25,000<span> / month</span></h4>
                                 <ul>
-                                    <li>Have to cook food</li>
-                                    <li>Clean The House</li>
-                                    <li>Have to come two times in a day</li>
+                                    <li>Knowledge about ISP</li>
+                                    <li> Have sound knowledge of all kinds of</li>
+                                    <li> Serve as a technical resource for staff on</li>
                                 </ul>
                                 <div class="btn-wrap">
                                     <a href="#" class="btn-buy">Apply!</a>

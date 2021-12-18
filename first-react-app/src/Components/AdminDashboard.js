@@ -38,12 +38,12 @@ const AdminDashboard = () => {
                 
                 
                 <hr/><h4 style={{color:'#16a4a6', fontWeight: 'bold'}}>Last Post</h4><div style={{float: 'right'}}>
-                <p style={{color:'#04362d'}}>Posted At <br/>Date: {date.substring(0, 10)}<br/>
+                <p style={{color:'#3aad0c'}}>Posted At <br/>Date: {date.substring(0, 10)}<br/>
                 Time: {time.substring(11, 19)}</p>     
                 <a class="button-update" href="/post/list" role="button">Show All Posts</a></div><br/>Title: <Link style={{color:'#f08f11'}} to={"/posts/details/"+lastPost.Post_id}>{lastPost.Post_Title} </Link><br/>
                 Salary: {lastPost.Salary}
                 
-                        <br/>Posted By: {lastPost.Posted_By}<br/> Post Status: <p style={ lastPost.Post_Status=="Approved" ? { color:'green',  display:'inline'} : 
+                        <br/>Posted By: {lastPost.Posted_By}<br/> Post Status: <p style={ lastPost.Post_Status=="Approved" ? { color:'#2cbf51',  display:'inline'} : 
                         lastPost.Post_Status=="Rejected" ? { color:'red',  display:'inline'} :
                         lastPost.Post_Status=="Pending" ? { color:'#8ba807',  display:'inline'} : {}}> {lastPost.Post_Status}</p>
                         <hr/>

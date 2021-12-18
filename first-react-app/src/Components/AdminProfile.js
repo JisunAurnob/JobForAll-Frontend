@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 const AdminProfile = (props) =>{
     const {id} = useParams();
     useEffect(() => {
-        document.title = "Detailed Posts"
+        document.title = "Profile - Admin"
       }, [])
     const[profile, setMessages] = useState([]);
 
